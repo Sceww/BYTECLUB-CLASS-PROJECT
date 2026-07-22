@@ -1,14 +1,19 @@
 package edu.utsa.cs3443.byteclub.model.Person;
 
 public abstract class Person {
+    private final int id;
     private String firstName;
     private String lastName;
 
-    public Person(String firstName, String lastName) {
+    public Person(int id, String firstName, String lastName) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
+    public int getId() {
+        return id;
+    }
 
     public String getFirstName() {
         return firstName;

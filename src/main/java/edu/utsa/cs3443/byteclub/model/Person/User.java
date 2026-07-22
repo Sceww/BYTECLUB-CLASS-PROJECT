@@ -14,11 +14,10 @@ public class User extends Person {
     private String biography;
     private ArrayList<Item> shoppingCart;
     private String email;
-    private boolean isInstructor; // TODO: deliberate on whether instructor mode should be a thing to be implemented
     private ArrayList<Event> classList;
 
-    public User(String firstName, String lastName) {
-        super(firstName, lastName);
+    public User(int id, String firstName, String lastName) {
+        super(id, firstName, lastName);
     }
 
     public String getBiography() {
@@ -35,16 +34,18 @@ public class User extends Person {
         this.email = email;
     }
 
-    private ArrayList<String> readInterests(String line) {
+    private void readBiography() {
+        // TODO
+        return;
+    }
+
+    private ArrayList<String> readInterests() {
         //TODO
+        // reads from data/userData/this.id/interests.txt
         return null;
     }
-    private ArrayList<Event> readEvents(String line) {
+    private ArrayList<Event> readEvents() {
         //TODO
-        return null;
-    }
-    private ArrayList<Item> readShoppingCart(String line) {
-        //TODO: IMPLEMENT ME!
         return null;
     }
 
