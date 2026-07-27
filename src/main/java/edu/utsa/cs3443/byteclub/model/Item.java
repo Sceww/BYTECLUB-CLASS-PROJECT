@@ -16,21 +16,26 @@ public class Item {
 
     public enum Category { BOXING, SUPPLEMENTS, APPAREL }
 
+    private final int id;
     private String name;
     private double price;
     private boolean inStock;
     private boolean hasNutritionalValue;
     private Category category;
 
-    public Item(String name, double price, boolean inStock, boolean hasNutritionalValue, Category category) {
+    public Item(int id, String name, double price, boolean inStock, boolean hasNutritionalValue, Category category) {
+        this.id =  id;
         this.name = name;
         this.price = price;
         this.inStock = inStock;
         this.hasNutritionalValue = hasNutritionalValue;
         this.category = category;
-
     }
 
+
+    public int getId() {
+        return id;
+    }
 
 
 }

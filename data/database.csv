@@ -1,5 +1,5 @@
 exampleID,email,password,firstName,lastName
-0,example@gmail.com,first,last
-1,garrynewman@gmail.com,Garry,Newman
-2,lettucegenius@gmail.com,Tom,Fiddlestick
-3,gamingmushroom@yahoo.com,Teagen,Copeland
+0,email2@gmail.com,password2,goodfirst,goodlast
+70,myemail@email.com,password1,firstname,lastname
+30,realemail@email.com,mypassword123,Jim,Mathy
+10,trevor@gmail.com,industries,Trevor,Phillips

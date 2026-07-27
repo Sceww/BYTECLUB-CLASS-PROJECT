@@ -1,4 +1,0 @@
-day, from, to
-mon,00:00,24:00 // full day Monday
-tue,00:00 08:00 // 12 am to 8 am Tuesday
-tue,12:00 15:00 // 12 pm to 3 pm Tuesday
