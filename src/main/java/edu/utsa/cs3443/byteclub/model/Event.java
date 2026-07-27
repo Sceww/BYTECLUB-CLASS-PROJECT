@@ -27,6 +27,7 @@ public class Event {
     public boolean isOpen() { return isOpen; }
     public void setOpen(boolean open) { isOpen = open; }
 
+    private final int eventID;
     private String courseName;
     private String dateAndTime; //use Java time class
     private String location;
@@ -35,7 +36,8 @@ public class Event {
     private int numAttendees;
     private boolean isOpen;
 
-    public Event(String courseName, String dateAndTime, String location, User instructor, int numSeats, int numAttendees, boolean isOpen) {
+    public Event(int eventID, String courseName, String dateAndTime, String location, User instructor, int numSeats, int numAttendees, boolean isOpen) {
+        this.eventID = eventID;
         this.courseName = courseName;
         this.dateAndTime = dateAndTime;
         this.location = location;
@@ -46,6 +48,9 @@ public class Event {
 
     }
 
+    public int getEventID() {
+        return eventID;
+    }
 
     public boolean canJoin() {
         return isOpen && numAttendees < numSeats;
