@@ -12,21 +12,16 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="emailAs" layoutX="75.0" layoutY="231.0" text="Email" />
-            <TextField fx:id="passwordAs" layoutX="76.0" layoutY="273.0" text="Password" />
+            <TextField fx:id="emailAs" layoutX="75.0" layoutY="231.0" promptText="Email" />
+            <TextField fx:id="passwordAs" layoutX="76.0" layoutY="273.0" promptText="Password" />
             <Label alignment="CENTER" layoutX="116.0" layoutY="199.0" prefHeight="17.0" prefWidth="69.0" text="LOGIN">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Label>
-            <Hyperlink fx:id="hyperlinkAs" layoutX="96.0" layoutY="308.0" text="Forgot Password?">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Hyperlink>
-            <Hyperlink layoutX="112.0" layoutY="442.0" text="Sign up here!" />
+            <Hyperlink fx:id="signUpLink" layoutX="112.0" layoutY="442.0" onAction="#onSignupClick" text="Sign up here!" />
             <Label layoutX="91.0" layoutY="424.0" text="Don't have an account?" />
-            <Button layoutX="86.0" layoutY="338.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="127.0" text="LOGIN">
+            <Button fx:id="loginButton" layoutX="86.0" layoutY="315.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="28.0" prefWidth="127.0" text="LOGIN">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

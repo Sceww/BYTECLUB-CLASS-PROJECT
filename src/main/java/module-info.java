@@ -4,5 +4,7 @@ module edu.utsa.cs3443.byteclub {
 
 
     opens edu.utsa.cs3443.byteclub to javafx.fxml;
+    opens edu.utsa.cs3443.byteclub.controller to javafx.fxml;
     exports edu.utsa.cs3443.byteclub;
+    exports edu.utsa.cs3443.byteclub.controller;
 }

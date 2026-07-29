@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.HomeScreenController">
-
+<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.HomeScreenController">
+   <children>
+      <VBox prefHeight="500.0" prefWidth="300.0">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button fx:id="back_button" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+              </items>
+            </ToolBar>
+            <AnchorPane prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Need gear? Visit our store!" />
+                  <Button fx:id="storeButton" layoutX="242.0" layoutY="10.0" mnemonicParsing="false" onAction="#onStoreButtonClick" text="Store" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <ScrollPane prefHeight="354.0" prefWidth="300.0">
+               <content>
+                  <VBox prefHeight="800.0" prefWidth="200.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <Avatar layoutX="260.0" layoutY="5.0" />
+   </children>
 </AnchorPane>
