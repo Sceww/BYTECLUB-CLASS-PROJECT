@@ -52,6 +52,7 @@ public class User extends Person {
 
     public void readCart() {
         try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/shoppingCart.txt", getId())))) {
+            scnr.nextLine();
             while (scnr.hasNextInt()) {
                 Item i = Item.queryItem(scnr.nextInt());
                 if (i != null) {
@@ -65,6 +66,7 @@ public class User extends Person {
 
     public void readEvents() {
         try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/events.txt", getId())))) {
+            scnr.nextLine();
             while (scnr.hasNextInt()) {
                 Event e = Event.queryEvent(scnr.nextInt());
                 if (e != null) {
@@ -77,14 +79,14 @@ public class User extends Person {
     }
     public void readInterests() {
         try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/interests.txt", getId())))) {
-            setInterests(scnr.nextLine());
+            setInterests( scnr.hasNext() ? scnr.nextLine() : "");
         } catch (IOException e) {
 
         }
     }
     public void readBio() {
         try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/biography.txt", getId())))) {
-            biography = scnr.nextLine();
+            biography = scnr.hasNext() ? scnr.nextLine() : "" ;
         } catch (IOException e) {
 
         }

@@ -18,7 +18,7 @@ public class Event {
     public String getLocation() { return location; }
     public void setLocation(String location) { this.location = location; }
 
-    public User getInstructor() { return instructor; }
+    public Person getInstructor() { return instructor; }
     public void setInstructor(User instructor) { this.instructor = instructor; }
 
     public String getInstructorName() { return instructor.getFirstName() + " " + instructor.getLastName(); }
@@ -33,11 +33,11 @@ public class Event {
     private String courseName;
     private String dateAndTime; //use Java time class
     private String location;
-    private User instructor;
+    private Person instructor;
     private int numSeats;
     private int numAttendees;
 
-    public Event(int eventID, String courseName, String dateAndTime, String location, User instructor, int numSeats, int numAttendees) {
+    public Event(int eventID, String courseName, String dateAndTime, String location, Person instructor, int numSeats, int numAttendees) {
         this.eventID = eventID;
         this.courseName = courseName;
         this.dateAndTime = dateAndTime;
@@ -63,7 +63,7 @@ public class Event {
                     String date = line.next();
                     int numPeople = line.nextInt();
                     int numSeats = line.nextInt();
-                    return new Event(eventID, title, date, loc, (User) host, numSeats, numPeople);
+                    return new Event(eventID, title, date, loc, host, numSeats, numPeople);
                 }
             }
         } catch (IOException e) {}
@@ -75,6 +75,6 @@ public class Event {
     }
 
     public boolean canJoin() {
-        return numAttendees <= numSeats;
+        return numAttendees < numSeats;
     }
 }

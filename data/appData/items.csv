@@ -1,7 +1,7 @@
-itemID,itemName,price
-0,Gatorade,3.99
-1,Boxing Gloves,15.99
-2,Protein Shakes (4 pack),19.99
-3,Sweatband,5.99
-4,Gallon of Water,9.99
-5,Lifting Gloves,10.99
+itemID,itemName,price,imageURL
+0,Gatorade,3.99,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZFkxpFYVUj6ehfUm9a2iXFMPJcZCEbAg03--mjGk8RQ&s=10
+1,Boxing Gloves,15.99,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCNzLLiKG3aYasT54N5si6sL7Od8ney64Dqt5NaIiAIg&s=10
+2,Protein Shakes (4 pack),19.99,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndJ1eQkm8J27OdThWJ7lgRC7bPVZRt5tN4c-hGDyeQA&s=10
+3,Sweatband,5.99,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ-6y4BTYlxQBNcl5jKz4KAcrxfpFFJgGIDaolMjz_FQ&s=10
+4,Gallon of Water,9.99,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGvBtszSo4ix0fylH8nwhpK4w3fU7_nDhNSeTvTmtjLA&s=10
+5,Lifting Gloves,10.99,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4DrYp08i3txmzdjZjTIa8_ZbzyOOMhru4n-BhWJhq3A&s=10

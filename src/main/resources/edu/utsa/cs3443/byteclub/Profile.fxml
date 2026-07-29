@@ -13,7 +13,8 @@
             <Image url="@../../../../../../../data/userData/default/pfp.png" />
          </image>
       </ImageView>
-      <TextArea fx:id="bioTextArea" layoutX="50.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+      <TextArea fx:id="bioTextArea" layoutX="50.0" layoutY="117.0" prefHeight="81.0" prefWidth="200.0" wrapText="true" />
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackClick" text="Back" />
+      <Button layoutX="120.0" layoutY="215.0" mnemonicParsing="false" onAction="#onSaveClick" text="Save Bio" />
    </children>
 </AnchorPane>
