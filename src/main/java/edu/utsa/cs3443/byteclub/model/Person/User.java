@@ -21,6 +21,7 @@ public class User extends Person {
 
     public User(int id, String firstName, String lastName) {
         super(id, firstName, lastName);
+        biography = "";
         classList = new ArrayList<>();
         shoppingCart = new ArrayList<>();
         interestList = new ArrayList<>();
@@ -46,6 +47,46 @@ public class User extends Person {
         scnr.useDelimiter(",");
         while (scnr.hasNext()) {
             interestList.add(scnr.next().strip());
+        }
+    }
+
+    public void readCart() {
+        try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/shoppingCart.txt", getId())))) {
+            while (scnr.hasNextInt()) {
+                Item i = Item.queryItem(scnr.nextInt());
+                if (i != null) {
+                    shoppingCart.add(i);
+                }
+            }
+        } catch (IOException e) {
+
+        }
+    }
+
+    public void readEvents() {
+        try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/events.txt", getId())))) {
+            while (scnr.hasNextInt()) {
+                Event e = Event.queryEvent(scnr.nextInt());
+                if (e != null) {
+                    classList.add(e);
+                }
+            }
+        } catch (IOException e) {
+
+        }
+    }
+    public void readInterests() {
+        try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/interests.txt", getId())))) {
+            setInterests(scnr.nextLine());
+        } catch (IOException e) {
+
+        }
+    }
+    public void readBio() {
+        try (Scanner scnr = new Scanner(new File(String.format("data/userData/%d/biography.txt", getId())))) {
+            biography = scnr.nextLine();
+        } catch (IOException e) {
+
         }
     }
 
@@ -102,12 +143,32 @@ public class User extends Person {
         }
     }
 
-
     public void addToCart(Item item) {
         shoppingCart.add(item);
     }
 
     public void joinEvent(Event event) {
         classList.add(event);
+    }
+
+    public static User queryUser(int id) {
+        // first, scan database for user id
+        try (Scanner scnr = new Scanner(new File("data/database.csv"))) {
+            scnr.nextLine();
+            while (scnr.hasNextLine()) {
+                Scanner line = new Scanner(scnr.nextLine());
+                line.useDelimiter(",");
+                if (line.nextInt() == id) {
+                    // we found our user
+                    User u = new User(id, line.next(), line.next());
+                    u.readBio();
+                    u.readCart();
+                    u.readEvents();
+                    u.readInterests();
+                    return u;
+                }
+            }
+        } catch (IOException e) { }
+        return null;
     }
 }

@@ -32,6 +32,10 @@ public class Item {
         this.category = category;
     }
 
+    public static Item queryItem(int id) {
+        return null;
+    }
+
 
     public int getId() {
         return id;
