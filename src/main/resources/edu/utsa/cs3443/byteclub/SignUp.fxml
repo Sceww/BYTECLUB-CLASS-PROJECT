@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.SignUpScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.SignUpScreenController">
    <children>
-      <Label alignment="CENTER" layoutX="75.0" layoutY="44.0" prefHeight="121.0" prefWidth="149.0" text="BYTECLUB">
+      <Label alignment="CENTER" layoutX="129.0" layoutY="46.0" prefHeight="121.0" prefWidth="149.0" text="BYTECLUB">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="107.0" layoutY="198.0" prefHeight="26.0" prefWidth="87.0" text="SIGN UP">
+      <Label alignment="CENTER" layoutX="161.0" layoutY="200.0" prefHeight="26.0" prefWidth="87.0" text="SIGN UP">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="emailField" layoutX="69.0" layoutY="225.0" prefHeight="25.0" prefWidth="154.0" promptText="Email" />
-      <TextField fx:id="passwordField" layoutX="69.0" layoutY="250.0" prefHeight="25.0" prefWidth="154.0" promptText="Password" />
-      <TextField fx:id="confirmPasswordField" layoutX="69.0" layoutY="275.0" prefHeight="25.0" prefWidth="154.0" promptText="Confirm Password" />
-      <TextField fx:id="firstNameField" layoutX="69.0" layoutY="305.0" prefHeight="25.0" prefWidth="154.0" promptText="First Name" />
-      <TextField fx:id="lastNameField" layoutX="69.0" layoutY="330.0" prefHeight="25.0" prefWidth="154.0" promptText="Last Name" />
-      <Button fx:id="createAccountButton" contentDisplay="CENTER" layoutX="84.0" layoutY="381.0" mnemonicParsing="false" onAction="#onSignupClick" prefHeight="29.0" prefWidth="115.0" text="CREATE ACCOUNT!">
+      <TextField fx:id="emailField" layoutX="123.0" layoutY="227.0" prefHeight="25.0" prefWidth="154.0" promptText="Email" />
+      <TextField fx:id="passwordField" layoutX="123.0" layoutY="252.0" prefHeight="25.0" prefWidth="154.0" promptText="Password" />
+      <TextField fx:id="confirmPasswordField" layoutX="123.0" layoutY="277.0" prefHeight="25.0" prefWidth="154.0" promptText="Confirm Password" />
+      <TextField fx:id="firstNameField" layoutX="123.0" layoutY="307.0" prefHeight="25.0" prefWidth="154.0" promptText="First Name" />
+      <TextField fx:id="lastNameField" layoutX="123.0" layoutY="332.0" prefHeight="25.0" prefWidth="154.0" promptText="Last Name" />
+      <Button fx:id="createAccountButton" contentDisplay="CENTER" layoutX="138.0" layoutY="383.0" mnemonicParsing="false" onAction="#onSignupClick" prefHeight="29.0" prefWidth="115.0" text="CREATE ACCOUNT!">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
