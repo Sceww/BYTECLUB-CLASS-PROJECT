@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.LoginScreenController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.LoginScreenController">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="emailAs" layoutX="75.0" layoutY="231.0" promptText="Email" />
-            <TextField fx:id="passwordAs" layoutX="76.0" layoutY="273.0" promptText="Password" />
-            <Label alignment="CENTER" layoutX="116.0" layoutY="199.0" prefHeight="17.0" prefWidth="69.0" text="LOGIN">
+            <TextField fx:id="emailAs" layoutX="124.0" layoutY="253.0" promptText="Email" />
+            <TextField fx:id="passwordAs" layoutX="125.0" layoutY="295.0" promptText="Password" />
+            <Label alignment="CENTER" layoutX="165.0" layoutY="221.0" prefHeight="17.0" prefWidth="69.0" text="LOGIN">
                <font>
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Label>
-            <Hyperlink fx:id="signUpLink" layoutX="112.0" layoutY="442.0" onAction="#onSignupClick" text="Sign up here!" />
-            <Label layoutX="91.0" layoutY="424.0" text="Don't have an account?" />
-            <Button fx:id="loginButton" layoutX="86.0" layoutY="315.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="28.0" prefWidth="127.0" text="LOGIN">
+            <Hyperlink fx:id="signUpLink" layoutX="161.0" layoutY="464.0" onAction="#onSignupClick" text="Sign up here!" />
+            <Label layoutX="140.0" layoutY="446.0" text="Don't have an account?" />
+            <Button fx:id="loginButton" layoutX="135.0" layoutY="337.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="28.0" prefWidth="127.0" text="LOGIN">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="40.0" prefHeight="121.0" prefWidth="149.0" text="BYTECLUB">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="62.0" prefHeight="121.0" prefWidth="149.0" text="BYTECLUB">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
