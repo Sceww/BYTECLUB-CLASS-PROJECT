@@ -29,7 +29,7 @@
             </AnchorPane>
             <ScrollPane hbarPolicy="NEVER" prefHeight="430.0" prefWidth="400.0" vbarPolicy="ALWAYS">
                <content>
-                  <VBox fx:id="eventVBox" prefHeight="100.0" prefWidth="277.0" />
+                  <VBox fx:id="eventVBox" spacing="0" prefHeight="100.0" prefWidth="277.0" />
                </content>
             </ScrollPane>
          </children>

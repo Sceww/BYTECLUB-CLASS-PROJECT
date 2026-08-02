@@ -17,7 +17,7 @@
             </ToolBar>
             <ScrollPane hbarPolicy="NEVER" prefHeight="565.0" prefWidth="400.0" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
                <content>
-                  <VBox fx:id="eventVBox" prefHeight="200.0" prefWidth="384.0" />
+                  <VBox fx:id="eventVBox" spacing="0" prefHeight="200.0" prefWidth="384.0" />
                </content>
             </ScrollPane>
          </children>

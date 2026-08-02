@@ -77,4 +77,16 @@ public class Event {
     public boolean canJoin() {
         return numAttendees < numSeats;
     }
+
+    public void incrementAttendees() {
+        numAttendees++;
+        Database.updateEventAttendance(eventID, numAttendees);
+    }
+
+    public void decrementAttendees() {
+        if (numAttendees > 0) {
+            numAttendees--;
+        }
+        Database.updateEventAttendance(eventID, numAttendees);
+    }
 }

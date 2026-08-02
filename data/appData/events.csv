@@ -1,6 +1,6 @@
 EventID,hostID,location,title,desc,date,numPeople,numSeats
-0,0,Byteclub @ Potranco,Jogging,We will be jogging today!,01/01/2026 12:00 PM,10,10
-1,0,Byteclub @ Potranco,Swimming,We will be swimming today!,01/15/2026 3:00 PM,7,10
-2,10,Culebra Creek Trailhead,Biking,We are meeting for our weekly bike ride!,01/16/2026 2:00 PM,5,5
-3,30,Byteclub @ Culebra,Boxing,Looking for a sparring partner!,02/12/2026 1:00 PM,4,4
-4,70,Byteclub @ Culebra,Yoga,We will be performing group yoga on this day!,02/12/2026 9:00 AM,16,20
+0,0,Byteclub @ Potranco,MMA,Mixed martial arts sparring and technique session!,01/01/2026 12:00 PM,10,10
+1,0,Byteclub @ Potranco,Wrestling Takedown Basics,Learn fundamental wrestling takedowns and defense!,01/15/2026 3:00 PM,7,10
+2,10,Culebra Creek Trailhead,Muay Thai Striking,We are working on Muay Thai striking combos today!,01/16/2026 2:00 PM,5,5
+3,30,Byteclub @ Culebra,Boxing Beginner Fundamentals,Looking for a sparring partner!,02/12/2026 1:00 PM,4,4
+4,70,Byteclub @ Culebra,Footwork,We will be drilling fighter footwork and agility!,02/12/2026 9:00 AM,16,20

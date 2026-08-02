@@ -149,8 +149,24 @@ public class User extends Person {
         shoppingCart.add(item);
     }
 
-    public void joinEvent(Event event) {
+    public boolean joinEvent(Event event) {
+        for (Event e : classList) {
+            if (e.getEventID() == event.getEventID()) {
+                // already signed up for this event
+                return false;
+            }
+        }
         classList.add(event);
+        return true;
+    }
+
+    public boolean hasJoined(Event event) {
+        for (Event e : classList) {
+            if (e.getEventID() == event.getEventID()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static User queryUser(int id) {
