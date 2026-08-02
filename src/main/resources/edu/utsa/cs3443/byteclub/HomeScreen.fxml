@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.Avatar?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.HomeScreenController">
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.HomeScreenController">
    <children>
-      <VBox prefHeight="500.0" prefWidth="300.0">
+      <VBox prefHeight="600.0" prefWidth="400.0">
          <children>
-            <ToolBar prefHeight="40.0" prefWidth="200.0">
-              <items>
-                <Button fx:id="back_button" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
-              </items>
-            </ToolBar>
-            <AnchorPane prefHeight="50.0" prefWidth="300.0">
+            <AnchorPane prefHeight="57.0" prefWidth="300.0">
                <children>
-                  <Label layoutX="14.0" layoutY="14.0" text="Need gear? Visit our store!" />
-                  <Button fx:id="storeButton" layoutX="242.0" layoutY="10.0" mnemonicParsing="false" onAction="#onStoreButtonClick" text="Store" />
+                  <Button fx:id="logoutButton" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#onLogoutClick" text="Logout" />
+                  <Button fx:id="profileButton" layoutX="336.0" layoutY="13.0" mnemonicParsing="false" onAction="#onProfileClick" text="Profile" />
                </children>
             </AnchorPane>
             <Separator prefWidth="200.0" />
-            <ScrollPane prefHeight="354.0" prefWidth="300.0">
+            <AnchorPane prefHeight="59.0" prefWidth="300.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Need gear? Visit our store!" />
+                  <Button fx:id="storeButton" layoutX="342.0" layoutY="14.0" mnemonicParsing="false" onAction="#onStoreButtonClick" text="Store" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane prefHeight="50.0" prefWidth="300.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Upcoming Classes" />
+                  <Button fx:id="viewClassesButton" layoutX="267.0" layoutY="5.0" mnemonicParsing="false" onAction="#onViewClassesClick" prefHeight="36.0" prefWidth="119.0" text="View my Classes" wrapText="true" />
+               </children>
+            </AnchorPane>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="430.0" prefWidth="400.0" vbarPolicy="ALWAYS">
                <content>
-                  <VBox prefHeight="800.0" prefWidth="200.0" />
+                  <VBox fx:id="eventVBox" prefHeight="100.0" prefWidth="277.0" />
                </content>
             </ScrollPane>
          </children>
       </VBox>
-      <Avatar layoutX="260.0" layoutY="5.0" />
    </children>
 </AnchorPane>
