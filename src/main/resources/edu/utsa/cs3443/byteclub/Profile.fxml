@@ -3,16 +3,28 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.byteclub.controller.ProfileScreenController">
    <children>
-      <ImageView fx:id="user_profile_picture" fitHeight="63.0" fitWidth="63.0" layoutX="169.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../data/userData/default/pfp.png" />
-         </image>
-      </ImageView>
-      <TextArea fx:id="bioTextArea" layoutX="100.0" layoutY="118.0" prefHeight="81.0" prefWidth="200.0" wrapText="true" />
       <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackClick" text="Back" />
-      <Button layoutX="170.0" layoutY="216.0" mnemonicParsing="false" onAction="#onSaveClick" text="Save Bio" />
+
+      <ImageView fx:id="user_profile_picture" fitHeight="80.0" fitWidth="80.0" layoutX="160.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+
+      <Button layoutX="140.0" layoutY="115.0" mnemonicParsing="false" onAction="#onChoosePictureClick" prefWidth="120.0" text="Change Photo" />
+
+      <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="150.0" prefHeight="20.0" prefWidth="200.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="100.0" layoutY="180.0" text="Bio:" />
+      <TextArea fx:id="bioTextArea" layoutX="100.0" layoutY="200.0" prefHeight="100.0" prefWidth="200.0" wrapText="true" />
+
+      <Label layoutX="100.0" layoutY="310.0" text="Interests (comma separated):" />
+      <TextField fx:id="interestsField" layoutX="100.0" layoutY="330.0" prefHeight="25.0" prefWidth="200.0" promptText="e.g. Boxing, Nutrition, Yoga" />
+
+      <Button fx:id="saveButton" layoutX="155.0" layoutY="380.0" mnemonicParsing="false" onAction="#onSaveClick" prefWidth="90.0" text="Save Profile" />
    </children>
 </AnchorPane>
