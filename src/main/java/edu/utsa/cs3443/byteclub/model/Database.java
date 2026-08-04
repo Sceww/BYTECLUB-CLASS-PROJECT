@@ -6,6 +6,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Database {
@@ -40,6 +42,33 @@ public class Database {
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(String.format("%d,%d,%s,%s,%s,%s,%d,%d\n",eventID,hostID,location,title,desc,date,numPeople,numSeats));
             bw.close();
+        } catch (IOException ignored) {}
+    }
+
+    public static void updateEventAttendance(int eventID, int numPeople) {
+        // rewrite events.csv, updating the numPeople column for the matching eventID
+        File f = new File("data/appData/events.csv");
+        List<String> lines = new ArrayList<>();
+        try (Scanner scnr = new Scanner(f)) {
+            while (scnr.hasNextLine()) {
+                lines.add(scnr.nextLine());
+            }
+        } catch (IOException e) {
+            return;
+        }
+        for (int i = 1; i < lines.size(); i++) {
+            String[] parts = lines.get(i).split(",", -1);
+            if (parts.length > 6 && Integer.parseInt(parts[0]) == eventID) {
+                parts[6] = String.valueOf(numPeople);
+                lines.set(i, String.join(",", parts));
+                break;
+            }
+        }
+        try (FileWriter fw = new FileWriter(f, false); BufferedWriter bw = new BufferedWriter(fw)) {
+            for (String line : lines) {
+                bw.write(line);
+                bw.newLine();
+            }
         } catch (IOException ignored) {}
     }
 
